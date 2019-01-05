@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BuyBing",
+            "request": "launch",
+            "mainClass": "BuyBing"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test2",
+            "request": "launch",
+            "mainClass": "Test2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Buy_bing",
+            "request": "launch",
+            "mainClass": "Buy_bing"
+        }
+    ]
+}
