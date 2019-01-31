@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test043</title>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script>
+        /*
+        左右商品的移动
+        1.页面加载
+        2.点击right1触发函数
+        3.函数里将预先选定好的选项添加到后边
+        */
+       //将左边的一个一个添加到右边
+        $(function(){
+            $("#right1").click(function(){
+                $("#righttest").append($("#lefttest option:selected"));
+            });
+        });
+        //将左边全部添加到右边
+        $(function(){
+            $("#rightall").click(function(){
+                $("#righttest").append($("#lefttest option"));
+            });
+        });
+        //鼠标双击添加到右边
+        $(function(){
+            $("#lefttest").dblclick(function(){
+                $("#righttest").append($("#lefttest option:selected"));
+            });
+        });
+        //将右边一个个添加到左边
+        $(function(){
+            $("#left1").click(function(){
+                $("#lefttest").append($("#righttest option:selected"));
+            });
+        });
+        //将右边全部天乩到左边
+        $(function(){
+            $("#leftall").click(function(){
+                $("#lefttest").append($("#righttest option"));
+            });
+        });
+        //鼠标双击添加到左边
+        $(function(){
+            $("#righttest").dblclick(function(){
+                $("#lefttest").append($("#righttest option:selected"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="width:30%;height:200px;">
+        <div style="float:left;">
+            <select id="lefttest" multiple="multiple">
+                <option value="">小米手机</option>
+                <option value="">苹果手机</option>
+                <option value="">魅蓝手机</option>
+                <option value="">锤子手机</option>
+            </select>
+            <br>
+            <a href="#" id="right1">&gt;&gt;</a><br>
+            <a href="#" id="rightall">&gt;&gt;&gt;</a>
+        </div>
+        <div style="float:right;">
+            <select id="righttest" multiple="multiple"> 
+                <option value="">联想电脑</option>
+                <option value="">苹果电脑</option>
+                <option value="">戴尔电脑</option>
+                <option value="">哈哈电脑</option>
+            </select>
+            <br>
+            <a href="#" id="left1">&lt;&lt;</a><br>
+            <a href="#" id="leftall">&lt;&lt;&lt;</a>
+        </div>
+    </div>
+</body>
+</html>

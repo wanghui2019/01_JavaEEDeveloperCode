@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <script>
+        function init(){
+            //得到第一个checkbox
+            var checkone=document.getElementById("checkone");
+            //定义第一个checkbox的状态
+            var checkstatiu=checkone.checked;
+            //根据标签名称获取所有的checkbox
+            var checkall=document.getElementsByTagName("input");
+            //对checkbox进行遍历
+            for(var i=1;i<checkall.length;i++){
+                //得到每一个checkbox
+                var checkbox=checkall[i];
+                //让遍历的checkbox的状态和第一个checkbox的状态一致
+                checkbox.checked=checkstatiu;
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1px" width="50%" height="300px id="tab" >
+        <tr>
+            <td><input type="checkbox" onclick="init()" id="checkone"></td>
+            <td>11</td>
+            <td>11</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>11</td>
+            <td>11</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>11</td>
+            <td>11</td>
+            <td>11</td>
+        </tr>
+    </table> 
+     
+</body>
+</html>

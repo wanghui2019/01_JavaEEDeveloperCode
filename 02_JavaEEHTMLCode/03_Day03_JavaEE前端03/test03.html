@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test03</title>
+    
+    <script>
+        var text01;                 //获取成员变量
+        //设置提示语
+        function fouse(){
+            text01=document.getElementById("alert1");
+            text01.innerHTML="<font color='red' size='2'>长度不能小于6位</font>";  
+        }
+        //焦点移开时触发
+        function check(){
+            var username=document.getElementById("username").value;
+            text01.innerHTML="";
+            if(username.length<6){
+                text01.innerHTML="<font color='red' size='2'>对不起,太短</font>";
+            }else{
+                text01.innerHTML="<font color='red' size='2'>用户名可用</font>";
+                
+            } 
+        }
+    </script>
+</head>
+<body>
+    用户名
+    <input type="text" size="30" id="username" onfocus="fouse()"  onblur="check()" onkeyup="check()"><span id="alert1" ></span><br />
+    密码<input type="text">
+</body>
+</html>

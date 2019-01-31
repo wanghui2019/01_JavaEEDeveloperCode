@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test041</title>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        $(function(){
+            $("tr:even").css("background-color","yellow");
+        });
+        $(function(){
+            $("#firstbox").click(function(){
+                $("input:gt(0)").prop("checked",this.checked);
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <table border="3px" width="30%" height="200px" bgcolor="black">
+            <tr>
+                <td><input type="checkbox" id="firstbox"></td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>41</td>
+            <td>42</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>51</td>
+            <td>52</td>
+            <td>53</td>
+        </tr>
+    </table>
+</body>
+</html>

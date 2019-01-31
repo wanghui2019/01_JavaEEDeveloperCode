@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test042</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <script>
+        //人员数组
+        var namealls = [
+            ["路飞","索隆","山治","乔巴"],
+            ["鸣人","佐助","小樱"],
+            ["韩庚","马云","马化腾"]   
+        ];
+        //加载文档
+        $(function(){
+            //选择
+            $("#classname").change(function(){
+                //根据值找到确定的数组
+                var everynames=namealls[this.value];
+                //将子类选择请空
+                $("#nametest").empty();
+                //遍历
+                $(everynames).each(function(i,n){
+                    //添加
+                    $("#nametest").append("<option>"+n+"</option>");
+                });
+            })
+        })
+        
+       
+    </script>
+</head>
+<body>
+    <select id="classname">
+        <option value="-1" class="clazz">--请选择--</option>
+        <option value="0" class="clazz">海贼王</option>
+        <option value="1" class="clazz">火影忍者</option>
+        <option value="2" class="clazz">西游记</option>
+    </select>
+    <select id="nametest"></select>
+</body>
+</html>

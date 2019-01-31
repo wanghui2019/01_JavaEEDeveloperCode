@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>provice&city</title>
+    <script>
+        var nameall=[
+                ["韩庚","马云","马化腾"],
+                ["路飞","索隆","山治","乔巴"]
+                ["鸣人","佐助","小樱"]
+            ];
+        function changeClass(){  
+            /*
+            1.先得到class里的信息
+            2.得到其相对应的值
+            3.对name数组进行遍历
+            4.得到每一个name项的选项
+            
+            5.创建一个option属性节点
+            6.创建一个文本节点,将遍历的name逐个添加到option属性里
+
+            7.将创建好的option属性挂到select下
+            */
+           
+           var classall=document.getElementById("class");
+           var classnum=classall.value;
+           var name3=nameall[classnum];
+           alert(name3);
+           var peoplename1=document.getElementById("peoplename");
+           
+           for(var i=0;i<name3.length;i++){
+                var everyname=name3[i];
+                alert(everyname);
+                var nameoption=document.createElement("option"); //<option></option>
+                var nametest=document.createTextNode(everyname);   //韩庚
+                nameoption.appendChild(nametest);                  //<option>韩庚</option>
+
+                peoplename1.appendChild(nameoption);
+           }
+        }
+    </script>
+</head>
+<body>
+    <select id="class" onchange="changeClass()">
+        <option value="-1">请选择</option>
+        <option value="0">终极一班</option>
+        <option value="1">海贼王</option>
+        <option value="2">火影忍者</option>
+    </select>
+    <select id="peoplename"></select>
+</body>
+</html>
