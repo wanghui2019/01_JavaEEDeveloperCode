@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test05</title>
+    <script src="../js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="../css/my.css">
+    <script>
+        $(function(){
+            $(".point").after("<font color='red' size='2'>*</font>");
+            $(".point").blur(function(){
+                //var value=this.value;通过js获取当前的值
+                var value=$(this).val();//通过JQ获取当前的值
+                $(this).parent().find("span").remove();
+                if($(this).is("#username")){
+                    if(value.length<6){
+                        $(this).parent().append("<span class='pstyle'>用户名太短</span>");
+                    }else{
+                        $(this).parent().append("<span class='pstyle'>恭喜你,够用</span>");
+                    }  
+                }   
+            }).focus(function(){
+                $(this).triggerHandler("blur");
+            }).keyup(function(){
+                $(this).triggerHandler("blur");
+            });
+            
+            
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form action="">
+            <span ><!--父-->
+                用户名<input type="text" placeholder="请输入用户名" class="point" id="username"><!--子-->
+                <!--*兄弟-->
+                <!--<span id='a'>用户名太短</span>-->
+            </span><br>
+            <span>
+                密码<input type="password" placeholder="请输入密码" class="point">
+            </span><br>
+            <span>
+                确认密码<input type="password" placeholder="请再次输入密码" class="point">
+            </span><br>
+            <span>
+                邮箱<input type="email" placeholder="请输入邮箱" class="point">
+            </span><br>
+            <span>
+                <input type="submit" value="提交" id="onsub">
+            </span>
+        </form>
+    </div>
+</body>
+</html>
