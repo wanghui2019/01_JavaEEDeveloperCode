@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns:xsi:这里必须这样写,表示这是个参考实例 -->
+<!-- xmlns:这里是名称空间,也固定了.写的是schema里面的顶部目标名称空间 -->
+<!-- xsi:schemaLocation:有两段,前半段是名称空间,也是目标空间的值,后面是约束文档的路径 -->
+<teachers
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.xiaohuihui.com/test02"
+	xsi:schemaLocation="http://www.xiaohuihui.com/test02 test02.xsd">
+	<teacher>
+		<name>张三</name>
+		<age>20</age>
+	</teacher>
+</teachers>

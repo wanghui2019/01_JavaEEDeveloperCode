@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--文档类型 根标签名称  网络上的dtd  dtd的名称  dtd的路径 -->
+<!--<!DOCTYPE stus PUBLIC "//UNKNOWN/" "unknown.dtd">-->
+
+<!--应用本地的DTD :根标签名称  引入本地的DTD  dtd的位置  -->
+<!--<!DOCTYPE stus SYSTEM  "test01.dtd">-->
+
+<!--在XML文档里面直接嵌入DTD的约束法则  -->
+<!DOCTYPE stus [
+	<!ELEMENT stus (stu)>
+	<!ELEMENT stu (name,age)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+]>
+<stus>
+	<stu>
+		<name>张三</name>
+		<age>19</age>
+	</stu>
+</stus>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!-- xmlns : xml namespace:名称空间,schema遵循W3C的规则 -->
+	<!-- targetNamespace:目标名称空间,下面定义的元素都与这个名称空间绑定上 -->
+	<!-- elementFormDefault:元素的格式化情况 -->
+<schema
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.xiaohuihui.com/test02" 
+	xmlns:tns="http://www.xiaohuihui.com/test02" elementFormDefault="qualified">
+	<!-- 这是一个复杂元素 -->
+	<element name="teachers">
+		<complexType>
+			<sequence>
+				<!-- 这是一个复杂元素 -->
+				<element name="teacher">
+					<complexType>
+						<sequence>
+							<!-- 这是一个简单元素 -->
+							<element name="name"></element>
+							<element name="age"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
