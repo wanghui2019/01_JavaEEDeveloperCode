@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>04_Day02_JavaEEWeb02</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 向tomcat报告,我的应用里有servlet,名字叫helloServet,具体路径是com.day02.servlet.HelloServlet -->
+  <servlet>
+  	<servlet-name>helloServlet</servlet-name>
+  	<servlet-class>com.day02.servlet.HelloServlet</servlet-class>
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <!-- 注册servlet的映射,servletName:找到上面注册的具体servlet,url-pattern,在地址栏上的路径,以/开头 -->
+  <servlet-mapping>
+  	<servlet-name>helloServlet</servlet-name>
+  	<url-pattern>/a</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>path</servlet-name>
+  	<servlet-class>com.day02.servlet.HelloServlet01</servlet-class>
+  </servlet>
+  <!-- 注册servlet的映射,servletName:找到上面注册的具体servlet,url-pattern,在地址栏上的路径,以/开头 -->
+  <servlet-mapping>
+  	<servlet-name>path</servlet-name>
+  	<url-pattern>/b</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>helloConfig</servlet-name>
+  	<servlet-class>com.day02.servlet.HelloServletConfig</servlet-class>
+  	<!-- init-param用于添加初始化参数 -->
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>张三</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>address</param-name>
+  		<param-value>北京</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>age</param-name>
+  		<param-value>18</param-value>
+  	</init-param>
+  </servlet>
+  <!-- 注册servlet的映射,servletName:找到上面注册的具体servlet,url-pattern,在地址栏上的路径,以/开头 -->
+  <servlet-mapping>
+  	<servlet-name>helloConfig</servlet-name>
+  	<url-pattern>/c</url-pattern>
+  </servlet-mapping>
+</web-app>
+
