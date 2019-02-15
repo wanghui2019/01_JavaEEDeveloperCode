@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Demo_Project_Test</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>GetShop</display-name>
+    <servlet-name>GetShop</servlet-name>
+    <servlet-class>com.servlet.shop.GetShop</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetShop</servlet-name>
+    <url-pattern>/product_info</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ClearRecond</display-name>
+    <servlet-name>ClearRecond</servlet-name>
+    <servlet-class>com.servlet.shop.ClearRecond</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClearRecond</servlet-name>
+    <url-pattern>/ClearRecond</url-pattern>
+  </servlet-mapping>
+</web-app>
